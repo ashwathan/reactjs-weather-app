@@ -1,8 +1,7 @@
 var React = require("react");
 var {Link, IndexLink} = require('react-router'); 
 
-var Nav = React.createClass({
-    render: function(){
+var Nav = (props)=>{
         return (
             <div>
                 <h2>Nav component</h2>
@@ -12,5 +11,5 @@ var Nav = React.createClass({
             </div>
         );
     }
-});
+
 module.exports = Nav;
