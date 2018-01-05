@@ -1,5 +1,20 @@
+var webpck = require('webpack');
+
 module.exports = {
-  entry: './app/app.jsx',
+  entry:[
+     'script!jquery/dist/jquery.min.js',
+     'script!foundation-sites/dist/foundation.min.js', 
+    './app/app.jsx'
+  ],
+  externals:{
+    jquery: 'jQuery'
+  },
+  plugins:[
+    new webpck.ProvidePlugin({
+      '$' : 'jquery',
+      'jQuery' : 'jquery' 
+    })
+  ],
   output: {
     path: __dirname,
     filename: './public/bundle.js'
