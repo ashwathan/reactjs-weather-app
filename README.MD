@@ -1,1 +1,1 @@
-https://hidden-hollows-82659.herokuapp.com/#/?_k=o4o3k5
+https://hidden-hollows-82659.herokuapp.com
