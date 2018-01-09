@@ -8,6 +8,9 @@ var About = require('About');
 var Examples = require('Examples');
 
 require('style!css!foundation-sites/dist/foundation.min.css');
+// app css
+require('style!css!sass!applicationStyles');
+
 ReactDOM.render(
   <Router history={hashHistory}>
     	<Route path="/" components={ Main }>
