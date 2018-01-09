@@ -1,4 +1,4 @@
-var webpck = require('webpack');
+var webpack = require('webpack');
 
 module.exports = {
   entry:[
@@ -10,9 +10,12 @@ module.exports = {
     jquery: 'jQuery'
   },
   plugins:[
-    new webpck.ProvidePlugin({
+    new webpack.ProvidePlugin({
       '$' : 'jquery',
       'jQuery' : 'jquery' 
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true
     })
   ],
   output: {
