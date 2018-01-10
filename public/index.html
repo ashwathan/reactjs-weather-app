@@ -8,14 +8,13 @@
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('service worker installed'))
+        .then((res) => console.log('service worker installed', res))
         .catch(err => console.error('Error', err));
     }
   </script>
 </head>
 <body>
   <div id="app"></div>
-
   <script src="bundle.js"></script>
 </body>
 
