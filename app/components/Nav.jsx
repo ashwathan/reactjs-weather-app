@@ -8,7 +8,7 @@ var Nav = React.createClass({
         var encodeLocation = encodeURI(location);
         if(location.length > 0){
             this.refs.navsearchinput.value = " ";
-            window.location.hash = "#/?location=" + location; 
+            window.location.hash = "#/?location=" + encodeLocation; 
         }
         //alert(location)
     },
