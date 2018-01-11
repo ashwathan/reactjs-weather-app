@@ -41,19 +41,19 @@
     }
 	}
   </style>
-  <script>
-        function scriptsLoaded(){
-    
-            document.getElementById("skeleton").setAttribute("style", "display:none");
-          
-        }
-  </script>
-  <script src="bundle.js" async onload="scriptsLoaded()"></script>
 </head>
 <body>
   <div class="skeleton" id="skeleton" style="z-index : 1000000;">
   </div>
   <div id="app"></div>
+  <script>
+      function scriptsLoaded(){
+  
+          document.getElementById("skeleton").setAttribute("style", "display:none");
+        
+      }
+  </script>
+  <script src="bundle.js" onload="scriptsLoaded()"></script>
 </body>
 
 </html>
