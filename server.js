@@ -7,7 +7,7 @@ var app = express();
 app.use(express.static('public'));
 
 const PORT = process.env.PORT || 3000; 
-//app.use(compress({filter: shouldCompress}))
+app.use(compress({filter: shouldCompress}))
 
 function shouldCompress (req, res) {
   if (req.headers['x-no-compression']) {
