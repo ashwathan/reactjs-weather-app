@@ -12,10 +12,46 @@
         .catch(err => console.error('Error', err));
     }
   </script>
+  <style>
+    #skeleton #app{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+
+    .skeleton{
+      width: 100%;
+      height: 100%;
+      background-color: #ccc;
+      animation: shine 0.5s infinite;
+    }
+    @keyframes shine {
+		0% {
+         background: linear-gradient(to right, #f0f0f0 , #eee, #dedede, #cecece);
+        }
+    25%{
+      background: linear-gradient(to right, #cecece, #f0f0f0 , #eee, #dedede);
+      }
+    50%{
+      background: linear-gradient(to right, #dedede, #cecece, #f0f0f0 , #eee);
+      }
+  75%{background: linear-gradient(to right, #eee, #dedede, #cecece, #f0f0f0);}
+  100% {
+      background: linear-gradient(to right, #f0f0f0, #eee, #dedede, #cecece );
+    }
+	}
+  </style>
 </head>
 <body>
+  <div class="skeleton" id="skeleton" >
+  </div>
   <div id="app"></div>
-  <script src="bundle.js" async="true"></script>
+  <script>
+    function scriptsLoaded(){
+      document.getElementById("skeleton").setAttribute("style", "display:none")
+    }
+  </script>
+  <script src="bundle.js" async="true" onload="scriptsLoaded()"></script>
 </body>
 
 </html>
